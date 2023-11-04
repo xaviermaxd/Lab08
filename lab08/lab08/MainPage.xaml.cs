@@ -13,6 +13,14 @@ namespace lab08
         public MainPage()
         {
             InitializeComponent();
+            Item1.Clicked += async (sender, e) =>
+            {
+                await Navigation.PushAsync(new BatterDemo());
+            };
+            Item2.Clicked += async (sender, e) =>
+            {
+                await Navigation.PushAsync(new QrScanDemo());
+            };
         }
     }
 }
